@@ -1,0 +1,84 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-aroundtown-dev-113812-authRole",
+      "UnauthRoleArn": "arn:aws:iam::302689243136:role/amplify-aroundtown-dev-113812-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::302689243136:role/amplify-aroundtown-dev-113812-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-aroundtown-dev-113812-deployment",
+      "UnauthRoleName": "amplify-aroundtown-dev-113812-unauthRole",
+      "StackName": "amplify-aroundtown-dev-113812",
+      "StackId": "arn:aws:cloudformation:us-east-1:302689243136:stack/amplify-aroundtown-dev-113812/e4be3d80-3bf2-11ec-ab52-12bb00d78f67",
+      "AmplifyAppId": "d26y8mh3hai8f1"
+    }
+  },
+  "auth": {
+    "aroundtown9bb62acb": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "loginMechanisms": [
+          "PREFERRED_USERNAME"
+        ],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": []
+      },
+      "output": {
+        "CreatedSNSRole": "arn:aws:iam::302689243136:role/sns9bb62acb113812-dev",
+        "UserPoolId": "us-east-1_iOOgwlbeU",
+        "AppClientIDWeb": "1q6g56kdhqq5a479r2h15h7lnc",
+        "AppClientID": "37hklv7972ifnekf5lld923qkn",
+        "IdentityPoolId": "us-east-1:ae6db701-065e-4188-bd4b-c090946d1da2",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:302689243136:userpool/us-east-1_iOOgwlbeU",
+        "IdentityPoolName": "aroundtown9bb62acb_identitypool_9bb62acb__dev",
+        "UserPoolName": "aroundtown9bb62acb_userpool_9bb62acb"
+      },
+      "lastPushTimeStamp": "2021-12-06T21:42:54.425Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-aroundtown-dev-113812-deployment/amplify-cfn-templates/auth/aroundtown9bb62acb-cloudformation-template.json",
+        "logicalId": "autharoundtown9bb62acb"
+      }
+    }
+  },
+  "api": {
+    "aroundtown": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "yqdxr6exszeotjg32egy3j52di",
+        "GraphQLAPIEndpointOutput": "https://ni5narxdx5cxvlltvactadg46i.appsync-api.us-east-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-bcdysckqqvdhdcz2wjtse6q6ku"
+      },
+      "lastPushTimeStamp": "2021-12-06T21:42:54.427Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-aroundtown-dev-113812-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apiaroundtown"
+      }
+    }
+  }
+}
